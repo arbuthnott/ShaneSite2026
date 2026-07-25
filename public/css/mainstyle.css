@@ -1,0 +1,449 @@
+/* Styles for the whole site */
+
+/*************************************
+ * COLORS
+ *
+ * GREYS
+ * verylight    #E8E8E8
+ * light        #D3D3D3
+ * grey         #BEBEBE
+ * dark         #818181
+ *
+ * BLUES
+ * primary      #1253A7
+ * primary+     #5895EF (link hover)
+ * dark         #294E7E
+ * verydark     #06336D
+ * light        #81B5F8
+ * verylight    #D2E3F8
+ *
+ * YELLOW
+ * primary      #FFA006
+ * dark         #A66702
+ * light        #FFCC79
+ *************************************/
+
+/*************************************
+ * GAB COLORS
+ *
+ * dark blue        #1D547A
+ * medium blue      #3E78A0
+ * golden yellow    #E9A72E
+ * medium grey      #888888
+ * dark grey        #272727
+ *
+ * image edge       #0E2A3F
+ *************************************/
+
+/**************
+ * FONT RULES *
+ * ************/
+
+@font-face {
+    font-family: oswald;
+    src: url('fonts/oswald-regular.ttf');
+}
+
+@font-face {
+    font-family: oswaldLight;
+    src: url('fonts/oswald-light.ttf');
+}
+
+@font-face {
+    font-family: oswaldBold;
+    src: url('fonts/oswald-bold.ttf');
+}
+
+@font-face {
+    font-family: bitter;
+    src: url('fonts/bitter-regular.otf');
+}
+
+@font-face {
+    font-family: bitterBold;
+    src: url('fonts/bitter-bold.otf');
+}
+
+@font-face {
+    font-family: bitterItalic;
+    src: url('fonts/bitter-italic.otf');
+}
+
+@font-face {
+    font-family: bitterBoldItalic;
+    src: url('fonts/bitter-bolditalic.otf');
+}
+
+/*************
+* ALL STYLES *
+*************/
+
+body {
+    font-family: bitter;
+    color: #272727;
+    font-size: 14px;
+    background-color: #E8E8E8;
+}
+a {
+    transition: color 0.4s;
+    text-decoration: none;
+    color: #3E78A0;
+}
+a:hover { text-decoration: none; color: #1D547A; }
+a.linkonly, a.linkonly:hover { color: inherit; }
+.yellow, .yellow-primary { color: #FFA006; }
+.yellow-light { color: #FFCC79; }
+.yellow-dark { color: #A66702; }
+.greytext { color: #616161; }
+
+a.lightYellowLink { color: #FFCC79; }
+a.lightYellowLink:hover { color: #FFE2B3; }
+a.darkYellowLink { color: #e68e00; }
+a.darkYellowLink:hover { color: #FFA006; }
+
+a.bookTitleLink {
+    font-family: oswaldBold, sans-serif;
+    font-size: 24px;
+}
+button.hover-glow-white:hover {
+    box-shadow: 0px 0px 25px -12px white;
+}
+
+.blueTiled {
+    background-image: url('../images/bannerTile.png');
+    background-repeat: repeat;
+    background-size: 480px 200px;
+    position: relative;
+    color: #E8E8E8;
+}
+.blueTiled.lighter::before {
+    content: " ";
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    background-color: #E8E8E8;
+    opacity: 0.2;
+}
+.blueTiled a { color: #BEBEBE; }
+.blueTiled a:hover { color: white; }
+
+img.fullColumn {
+    margin: 0px 3% 15px 3%;
+    width: 93%;
+    height: auto;
+    border-radius: 3px;
+    box-shadow: 1px 1px 8px black;
+}
+.cover-hover-button {
+    position: absolute;
+    right: 40px;
+    bottom: 0px;
+}
+.bookJacketText {
+    background-color: white;
+    padding: 10px 15px;
+    border-radius: 3px;
+    font-size: 14px;
+    line-height: 26px;
+    color: #272727;
+}
+.bookJacketText.smaller {
+    font-size: 14px;
+    line-height: 26px;
+}
+.sizedText {
+    font-size: 14px;
+    line-height: 26px;
+}
+.sizedHeading {
+    font-size: 18px;
+    line-height: 32px;
+}
+.bookJacketText::first-line {
+    font-size: 18px;
+    line-height: 32px;
+    font-style: italic;
+}
+.bookJacketText.smaller::first-line {
+    font-size: 14px;
+    line-height: 26px;
+}
+.bookTile {
+    width: 130px;
+    padding: 0px;
+    margin: 0px 20px 20px 20px;
+    transition: transform 0.4s;
+}
+.bookTile:hover { transform: scale(1.07,1.07); }
+.blueTiled .bookTile:hover .bookTileLink { color: white; }
+.bookTileLink {
+    display: block;
+    text-align: center;
+    margin-top: 7px;
+    font-size: 20px;
+    line-height: 24px;
+    font-family: bitterBold;
+}
+
+.authorImage {
+    width: 90%;
+    margin: 0px 5%;
+    padding-top: 90%;
+    background-image: url('../images/ShaneBlue.png');
+    background-size: cover;
+    background-position: top;
+    border-radius: 15px;
+}
+@media (min-width: 576px) {
+    .cover-hover-button { right: 20px; left: 20px; top: 220px; bottom: auto; }
+}
+@media (min-width: 768px) {
+    .cover-hover-button { right: 20px; left: 20px; top: 305px; bottom: auto; }
+}
+@media (min-width: 992px) {
+    a.bookTitleLink { font-size: 32px; }
+    
+    .bookJacketText {
+        padding: 15px 25px;
+        font-size: 18px;
+        line-height: 34px;
+    }
+    .bookJacketText.smaller {
+        font-size: 18px;
+        line-height: 34px;
+    }
+    .sizedText {
+        font-size: 18px;
+        line-height: 34px;
+    }
+    .sizedHeading {
+        font-size: 24px;
+        line-height: 48px;
+    }
+    .bookJacketText::first-line {
+        font-size: 24px;
+        line-height: 48px;
+    }
+    .bookJacketText.smaller::first-line {
+        font-size: 18px;
+        line-height: 34px;
+    }
+    .bookTile { width: 225px; }
+    .cover-hover-button { right: 35px; left: auto; top: 387px; bottom: auto; }
+}
+@media (min-width: 1200px) {
+    a.bookTitleLink { font-size: 32px; }
+    
+    .bookJacketText {
+        padding: 30px 45px;
+        font-size: 18px;
+        line-height: 34px;
+    }
+    .bookJacketText.smaller {
+        font-size: 18px;
+        line-height: 31px;
+    }
+    .sizedText {
+        font-size: 18px;
+        line-height: 34px;
+    }
+    .sizedHeading {
+        font-size: 24px;
+        line-height: 48px;
+    }
+    .bookJacketText::first-line {
+        font-size: 24px;
+        line-height: 48px;
+    }
+    .bookJacketText.smaller::first-line {
+        font-size: 18px;
+        line-height: 31px;
+    }
+    .bookTile { margin: 0px 35px 20px 35px; }
+    .cover-hover-button { right: 40px; left: auto; top: 470px; bottom: auto; }
+}
+
+/**************
+ * NAVIGATION *
+**************/
+#top-banner, footer {
+    background-image: url('../images/bannerTile.png');
+    background-repeat: repeat;
+    background-size: 480px 200px;
+}
+
+#top-banner {
+    position: sticky;
+    top: 0px;
+    z-index: 2;
+}
+
+#top-banner h1 {
+    font-family: oswald, sans-serif;
+    color: #FFA006;
+    font-size: 48px;
+    margin: 20px 0px 4px 0px;
+    transition: font-size 0.4s, margin 0.4s;
+}
+#top-banner h6 {
+    font-family: bitterBold, serif;
+    color: #BEBEBE;
+    font-size: 16px;
+    opacity: 0.8;
+    transition: font-size 0.4s, margin 0.4s;
+}
+
+#top-banner.smaller h1 {
+    font-size: 28px;
+    margin: 10px 0px 2px 0px;
+}
+#top-banner.smaller h6 {
+    font-size: 12px;
+    margin-bottom: 0px;
+}
+
+#top-nav { text-align: center; }
+#top-nav ul {
+    list-style: none;
+    text-align: center;
+    padding-left: 0px;
+    display: inline-block;
+    margin: 10px 0px 5px 0px;
+}
+#top-nav ul li {
+    font-family: oswald, sans;
+    font-size: 18px;
+    float: left;
+    padding: 3px 20px;
+    position: relative;
+}
+#top-nav ul li::after {
+    content: "|";
+    color: #BEBEBE;
+    position: absolute;
+    left: 0px;
+    top: 3px;
+}
+#top-nav ul li:first-child::after {
+    content: " ";
+}
+#top-nav ul li a {
+    display: block;
+    color: #BEBEBE;
+}
+#top-nav ul li a:hover {
+    text-decoration: none;
+    color: white;
+}
+#top-nav ul li a.active { color: #FFCC79; }
+#top-nav ul li a.active:hover { color: #ffe2b3; }
+
+footer {
+    color: #E8E8E8;
+    font-family: oswaldLight, sans-serif;
+}
+a.footerlink { color: #E8E8E8; }
+a.footerlink:hover { color: white; text-decoration: none; }
+
+/**************
+ * BOOK ITEMS *
+**************/
+.bookitem {
+    cursor: pointer;
+    margin-bottom: 25px;
+    margin-left: -15px;
+    margin-right: -15px;
+    padding: 15px;
+    border-radius: 15px;
+    transition: background-color .4s;
+}
+.bookitem:hover {
+    background-color: #D3D3D3;
+}
+.bookitem .bookitem-image img.fullColumn {
+    width: 120px;
+}
+.bookitem .bookitem-text {
+    width: 100%;
+    background-color: white;
+    border-radius: 3px;
+    padding: 10px 25px;
+    margin-left: 15px;
+}
+.bookitem .bookitem-heading {
+    font-family: bitterBold, serif;
+    font-size: 16px;
+    color: #3E78A0;
+    margin-bottom: 10px;
+}
+.bookitem .bookitem-publishdate {
+    color: #BEBEBE;
+    display: inline-block;
+    margin-left: 10px;
+    font-size: 12px;
+}
+.bookitem .bookitem-review {
+    color: #616161;
+    font-style: italic;
+    text-align: center;
+    padding: 0px 15px;
+    font-size: 14px;
+    margin-bottom: 28px;
+    display: flex;
+    align-items: center;
+}
+a.review-link {
+    font-style: normal;
+    font-size: 12px;
+    display: block;
+    margin-top: 10px;
+}
+.feather-review {
+    display: flex;
+    background-color: white;
+    border-radius: 13px;
+    border: 2px solid #D3D3D3;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.feather-review-left {
+    border-right: 2px solid #D3D3D3;
+}
+.feather-review-icon {
+    height: 50px;
+    margin: 25px;
+}
+.feather-review-right {
+    flex-grow: 2;
+    padding: 15px 30px 10px 30px;
+    color: #818181;
+    font-style: italic;
+    border-left: 2px solid #D3D3D3;
+    margin-left: -2px;
+}
+
+@media (min-width: 576px) {
+    .bookitem .bookitem-image img.fullColumn { width: 140px; }
+    .bookitem .bookitem-text { margin-left: 30px; }
+    .bookitem .bookitem-heading { font-size: 22px; }
+    .bookitem .bookitem-publishdate { font-size: 14px; margin-left: 20px; }
+    .bookitem .bookitem-review {
+        padding: 0px 30px;
+        font-size: 18px;
+    }
+    a.review-link { font-size: 14px; }
+}
+@media (min-width: 1200px) {
+    .bookitem .bookitem-image img.fullColumn { width: 180px; }
+    .bookitem .bookitem-text { margin-left: 45px; }
+    .bookitem .bookitem-heading { font-size: 24px; }
+    .bookitem .bookitem-publishdate { font-size: 14px; margin-left: 20px; }
+    .bookitem .bookitem-review {
+        padding: 0px 30px;
+        font-size: 18px;
+    }
+    a.review-link { font-size: 14px; }
+}
+

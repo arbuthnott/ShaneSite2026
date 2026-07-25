@@ -1,0 +1,10 @@
+Some hints for development, etc.
+
+Should be able to "run" this site by dragging index.html into the browser
+Can also start as an express app. Run "node ./app.js" from the console
+    (the top level one, outside the /public/ dir)
+    (maybe use pm2 for persistence?)
+    
+Can reference express.js intro docs for this simple implementation.
+User nvm from nvmnode.com to get current version of node and npm if needed.
+

@@ -1,0 +1,14 @@
+{
+  "name": "shanesite2026",
+  "version": "1.0.0",
+  "description": "Author site for Shane Arbuthnott 2026",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Chris Arbuthnott",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
