@@ -1,14 +1,22 @@
 {
   "name": "shanesite2026",
   "version": "1.0.0",
-  "description": "Author site for Shane Arbuthnott 2026",
+  "description": "Author website for Shane Arbuthnott served with Express, updated 2026",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arbuthnott/ShaneSite2026.git"
+  },
   "author": "Chris Arbuthnott",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/arbuthnott/ShaneSite2026/issues"
+  },
+  "homepage": "https://github.com/arbuthnott/ShaneSite2026#readme",
   "dependencies": {
-    "express": "^5.2.1"
+    "express": "^3.21.2"
   }
 }
