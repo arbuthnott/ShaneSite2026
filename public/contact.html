@@ -1,1 +1,103 @@
-<h1>The contact page!</h1>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <title>Shane Arbuthnott | Author</title>
+        <meta name="description" content="Website for Canadian author Shane Arbuthnott: Books, News and Reviews.">
+        <meta name="keywords" content="Shane Arbuthnott, Author, Books">
+        <meta name="author" content="Chris Arbuthnott">
+        <link rel="icon" href="/favicon.ico" />
+        
+        <!--STYLES-->
+        <link rel="stylesheet" href="/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/css/mainstyle.css">
+        <!--STYLES END-->
+    </head>
+    
+    <body>
+        <div class="d-flex flex-column justify-content-between" style="height: 100%;">
+            <div id="top-banner">
+                <div id="top-titles">
+                    <h1 class="text-center">SHANE ARBUTHNOTT</h1>
+                    <h6 class="text-center">~ Author ~</h6>
+                </div>
+                <nav id="top-nav">
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/books">Books</a></li>
+                        <li><a href="/about">About</a></li>
+                        <li><a class="active" href="/contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+            
+            <div id="main-content" class="py-5" style="flex-grow: 2;">
+                <div class="container mb-5 mt-4">
+                    <div class="row">
+                        <div class="col-12 col-md-10 offset-md-1 col-xl-8 offset-xl-2">
+                            <h4 class="text-center">Send me a note or a comment.</h4>
+                            
+                            <form class="contact-form mt-4" id="contact-form" onsubmit="return false;">
+                                <div class="form-row">
+                                    <div class="col-12 col-sm-2 text-sm-right">
+                                        <span class="form-label pl-2 pl-sm-0">Subject</span>
+                                    </div>
+                                    
+                                    <div class="col-12 col-sm-10 col-lg-9">
+                                        <input name="subject" id="subject" class="form-control" maxlength="200" placeholder="message subject"/>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-row mt-2">
+                                    <div class="col-12 col-sm-2 text-sm-right">
+                                        <span class="form-label pl-2 pl-sm-0">Message</span>
+                                    </div>
+                                    
+                                    <div class="col-12 col-sm-10 col-lg-9">
+                                        <textarea name="message" id="message" rows="5" class="form-control" maxlength="2000" placeholder="your message"></textarea>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-row mt-2">
+                                    <div class="col-12 col-sm-2 text-sm-right" dir="rtl">
+                                        <span class="form-label pl-2 pl-sm-0">Your&nbsp;Email</span>
+                                    </div>
+                                    
+                                    <div class="col-12 col-sm-10 col-lg-9">
+                                        <input name="email" id="email" class="form-control" maxlength="200" placeholder="your return email"/>
+                                    </div>
+                                </div>
+                                
+                                <div class="row">
+                                    <div class="col-12 text-center mt-4">
+                                        <button type="button" class="btn btn-dark btn-sm" id="send-contact">Send Message</button>
+                                    </div>
+                                </div>
+                            </form>
+                            
+                            <div id="contact-form-feedback"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <footer class="text-center py-4">
+                <span class="d-inline-block mr-4"><a href="/" class="lightYellowLink">Shane Arbuthnott</a></span>
+                <span class="d-inline-block">
+                    <span><a class="footerlink" href="/books">Books</a></span> &nbsp;&nbsp;|&nbsp;&nbsp;
+                    <span><a class="footerlink" href="/about">About</a></span> &nbsp;&nbsp;|&nbsp;&nbsp;
+                    <span><a class="footerlink" href="/contact">Contact</a></span>
+                </span>
+            </footer>
+        </div>
+        
+        <!--SCRIPTS-->
+        <script src="/scripts/jquery.min.js"></script>
+        <script src="/scripts/bootstrap.bundle.min.js"></script>
+        <script src="/scripts/app.js"></script>
+        <script src="/scripts/contact.js"></script>
+        <!--SCRIPTS END-->
+    </body>
+</html>

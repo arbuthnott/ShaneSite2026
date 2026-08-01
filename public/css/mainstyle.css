@@ -447,3 +447,24 @@ a.review-link {
     a.review-link { font-size: 14px; }
 }
 
+/****************
+ * CONTACT FORM *
+****************/
+
+form.contact-form {}
+.form-label {
+    font-size: 16px;
+    color: #818181;
+    font-family: bitterBold, serif;
+    display: inline-block;
+    margin-top: 8px;
+}
+.form-control::placeholder {
+    color: #bebebe;
+}
+#contact-form-feedback {
+    text-align: center;
+    color: #818181;
+    opacity: 0;
+    transition: opacity 0.4s;
+}
