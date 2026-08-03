@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/arbuthnott/ShaneSite2026#readme",
   "dependencies": {
-    "express": "^3.21.2"
+    "express": "^3.21.2",
+    "nodemailer": "^9.0.3"
   }
 }

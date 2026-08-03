@@ -88,6 +88,7 @@ a {
     transition: color 0.4s;
     text-decoration: none;
     color: #3E78A0;
+    cursor: pointer;
 }
 a:hover { text-decoration: none; color: #1D547A; }
 a.linkonly, a.linkonly:hover { color: inherit; }
