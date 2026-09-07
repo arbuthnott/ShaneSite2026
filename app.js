@@ -47,7 +47,7 @@ app.post('/api/contact', function(req, res) {
         from: config.gmailUser,
         to: config.emailRecipient,
         subject: 'WEBSITE CONTACT FORM: ' + (subj || '(no subject)'),
-        text: 'EMAIL: ' + email + '\nMESSAGE:\n' + msg
+        text: 'EMAIL: ' + (email || '(no email)') + '\nMESSAGE:\n' + msg
     };
     transporter.sendMail(mailData, function(err, info) {
         if (err) {

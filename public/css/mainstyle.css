@@ -98,13 +98,20 @@ a.linkonly, a.linkonly:hover { color: inherit; }
 .greytext { color: #616161; }
 
 a.lightYellowLink { color: #FFCC79; }
-a.lightYellowLink:hover { color: #FFE2B3; }
+a.lightYellowLink:hover, .yellow-verylight { color: #FFE2B3; }
 a.darkYellowLink { color: #e68e00; }
 a.darkYellowLink:hover { color: #FFA006; }
 
 a.bookTitleLink {
     font-family: oswaldBold, sans-serif;
     font-size: 24px;
+}
+.btn-dark {
+    transition: all 0.4s;
+}
+.btn-dark:hover, .btn-dark:active {
+    color: #FFE2B3;
+    transition: all 0.15s ease-in-out;
 }
 button.hover-glow-white:hover {
     box-shadow: 0px 0px 25px -12px white;
@@ -162,12 +169,12 @@ img.fullColumn {
     font-size: 18px;
     line-height: 32px;
 }
-.bookJacketText::first-line {
+.bookJacketText.leadingLine::first-line {
     font-size: 18px;
     line-height: 32px;
     font-style: italic;
 }
-.bookJacketText.smaller::first-line {
+.bookJacketText.smaller.leadingLine::first-line {
     font-size: 14px;
     line-height: 26px;
 }
@@ -223,11 +230,11 @@ img.fullColumn {
         font-size: 24px;
         line-height: 48px;
     }
-    .bookJacketText::first-line {
+    .bookJacketText.leadingLine::first-line {
         font-size: 24px;
         line-height: 48px;
     }
-    .bookJacketText.smaller::first-line {
+    .bookJacketText.leadingLine.smaller::first-line {
         font-size: 18px;
         line-height: 34px;
     }
@@ -254,11 +261,11 @@ img.fullColumn {
         font-size: 24px;
         line-height: 48px;
     }
-    .bookJacketText::first-line {
+    .bookJacketText.leadingLine::first-line {
         font-size: 24px;
         line-height: 48px;
     }
-    .bookJacketText.smaller::first-line {
+    .bookJacketText.smaller.leadingLine::first-line {
         font-size: 18px;
         line-height: 31px;
     }

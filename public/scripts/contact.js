@@ -9,13 +9,15 @@ setTimeout(function() { Library.addHumanHint('wait'); }, 700);
 
 Library.validateContact = function(formData) {
     var feedBackElem = $('#contact-form-feedback');
-    var foundError = !formData.message || !formData.email || Library.humanHints < 3;
+    // update, no more policing the email field
+    //var foundError = !formData.message || !formData.email || Library.humanHints < 3;
+    var foundError = !formData.message || Library.humanHints < 3;
     if (!foundError) {
-        foundError = !/^[^@]+@[^@]+\.[a-zA-Z]+$/i.test(formData.email);
+        //foundError = !/^[^@]+@[^@]+\.[a-zA-Z]+$/i.test(formData.email);
     }
     if (foundError) {
         var message = '<h6>Message not sent...</h6> ';
-        message += 'Something doesn\'t seem right. Please make sure you add message content and a proper email address before sending.';
+        message += 'Something doesn\'t seem right. Please make sure you add message content before sending.';
         feedBackElem.html(message).css('opacity', 1);
         return false;
     }
@@ -41,14 +43,14 @@ Library.sendContact = function() {
         
         if (data == 'sent') {
             var message = '<h6>Message sent</h6> ';
-            message += 'Thank you for your message! I will read it soon and respond if appropriate. ';
+            message += 'Thank you for your message! ';
             message += '<br /><a id="send-another" onclick="Library.resetContactForm()" class="darkYellowLink">send another message</a>'
             button.attr('disabled', 'disabled');
             form.find('input, textarea').attr('disabled', 'disabled');
             feedBackElem.html(message).css('opacity', 1);
         } else if (data == 'empty') {
             var message = '<h6>Message not sent...</h6> ';
-            message += 'Something doesn\'t seem right. Please make sure you add message content and a proper email address before sending.';
+            message += 'Something doesn\'t seem right. Please make sure you add message content before sending.';
             feedBackElem.html(message).css('opacity', 1);
             Library.disableSend = false; // allow retry
         } else if (data == 'error') {
@@ -62,7 +64,7 @@ Library.sendContact = function() {
             console.log(data);
             // let's be optimistic
             var message = '<h6>Message sent</h6> ';
-            message += 'Thank you for your message! I will read it soon and respond if appropriate. ';
+            message += 'Thank you for your message! ';
             message += '<br /><a id="send-another"  onclick="Library.resetContactForm()" class="darkYellowLink">send another message</a>'
             button.attr('disabled', 'disabled');
             form.find('input, textarea').attr('disabled', 'disabled');
